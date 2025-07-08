@@ -1,0 +1,54 @@
+# dark current (e- / second)
+darke: 8.2e-4
+# clock-induced charge (e- / pixel)
+cic: 1.0e-2
+# read noise (e- / pixel)
+rn: 165.0
+
+# cosmic ray hit rate (hits/m**2/sec)
+X: 5.0e+04
+# pixel area (m**2/pixel)
+a: 1.69e-10
+# number of pixels that would take out a target pixel if they were hit by a
+# CR (integer number of pixels)
+Lij: 512
+
+# fraction of pixel full well to allow frame to use
+alpha0: 1.0
+# pixel full well (e-)
+fwc: 90000
+# fraction of serial full well to allow frame to use
+alpha1: 1.0
+# serial full well (e-) -- (possibly) product of gain and photons
+fwc_em: 100000
+
+# Minimum number of images permitted in a data collection activity
+Nmin: 1
+# Maximum number of images permitted in a data collection activity
+Nmax: 49
+# Minimum allowable exposure time (seconds/frame)
+tmin: 0.1
+# Maximum allowable exposure time (seconds/frame)
+tmax: 120.0
+# Maximum allowable EM gain
+gmax: 8000.0
+# If calculations are desired at a fixed EM gain value gconst, set this to
+# a float, from 1 to gmax.  If fixed EM gain not desired, leave as ~.
+gconst: ~
+# number of standard deviations the signal after gain is below the max fwc_em
+n: 4
+# number of EM gain multiplying elements in the EXCAM EMCCD
+Nem: 604
+# tolerance level used used by optimizations
+tol: 1.0e-30
+# constraint bounds relaxed via delta_constr so that optimization has success
+# if constraints are satisfied within this fraction
+delta_constr: 1.0e-4
+# Overhead time, in seconds, for each collected frame.  Used to compute
+# total wall-clock time for data collection
+overhead: 12
+# Maximum allowed electrons/pixel/frame for photon counting
+pc_ecount_max: 0.1
+# number of read noise standard deviations at which to set the
+# photon-counting threshold
+T_factor: 5

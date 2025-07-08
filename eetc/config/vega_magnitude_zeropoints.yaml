@@ -1,0 +1,36 @@
+B:
+  # effective center wavelength [Ang]
+  lambda0: 4378.12
+  # flux zero point [erg/sec/cm^2/Ang]
+  flux0: 6.293e-9
+  # effective filter width [Ang]
+  filter_wid: 972.69
+  # pointer to filter response curve file [Ang, Transmission]
+  filter_file: 'astro_filters/Generic_Johnson.B.txt'
+V:
+  # effective center wavelength [Ang]
+  lambda0: 5466.11
+  # flux zero point [erg/sec/cm^2/Ang]
+  flux0: 3.575e-9
+  # effective filter width [Ang]
+  filter_wid: 889.65
+  # pointer to filter response curve file [Ang, Transmission]
+  filter_file: 'astro_filters/Generic_Johnson.V.txt'
+R:
+  # effective center wavelength [Ang]
+  lambda0: 6695.58
+  # flux zero point [erg/sec/cm^2/Ang]
+  flux0: 1.882e-9
+  # effective filter width [Ang]
+  filter_wid: 2069.97
+  # pointer to filter response curve file [Ang, Transmission]
+  filter_file: 'astro_filters/Generic_Johnson.R.txt'
+I:
+  # effective center wavelength [Ang]
+  lambda0: 8565.14
+  # flux zero point [erg/sec/cm^2/Ang]
+  flux0: 9.329e-10
+  # effective filter width [Ang]
+  filter_wid: 2316.00
+  # pointer to filter response curve file [Ang, Transmission]
+  filter_file: 'astro_filters/Generic_Johnson.I.txt'

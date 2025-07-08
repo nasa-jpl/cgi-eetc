@@ -1,0 +1,34 @@
+# Throughputs for each setting
+spam_lsam:
+    open_spam_open_lsam: 'spam_lsam/open_spam_open_lsam.txt'
+    spec_spam_open_lsam: 'spam_lsam/spec_spam_open_lsam.txt'
+    wfov_spam_open_lsam: 'spam_lsam/wfov_spam_open_lsam.txt'
+    open_spam_nfov_lsam: 'spam_lsam/open_spam_nfov_lsam.txt'
+    #open_spam_spec_lsam: 'does_not_exist'
+    #open_spam_wfov_lsam: 'does_not_exist'
+    spec_spam_spec_lsam: 'spam_lsam/spec_spam_spec_lsam.txt'
+    wfov_spam_wfov_lsam: 'spam_lsam/wfov_spam_wfov_lsam.txt'
+fpam:
+    open_12: 'fpam/open_12.txt'
+    open_34: 'fpam/open_34.txt'
+    nd2.25: 'fpam/nd225.txt'
+    nd4.75: 'fpam/nd475.txt'
+    nfov_flat_reflect: 'fpam/nfov_flat_reflect.txt' # for LOCAM
+    nfov_dm_reflect: 'fpam/nfov_dm_reflect.txt' # for LOCAM
+    wfov_reflect: 'fpam/wfov_reflect.txt' # for LOCAM
+    spec_reflect: 'fpam/spec_reflect.txt' # for LOCAM
+fsam:
+    open: 'fsam/open.txt'
+    nd4.75: 'fsam/nd475.txt'
+dpam:
+    open: 'dpam/open.txt' # for LOCAM use
+    imaging_lens: 'dpam/imaging_lens.txt'
+    pupil_lens: 'dpam/pupil_lens.txt'
+    defocus_1: 'dpam/defocus_1.txt'
+    defocus_2: 'dpam/defocus_2.txt'
+    defocus_3: 'dpam/defocus_3.txt'
+    defocus_4: 'dpam/defocus_4.txt'
+    zod600: 'dpam/zod600.txt'
+    zod730: 'dpam/zod730.txt'
+    wol0: 'dpam/wol0.txt'
+    wol45: 'dpam/wol45.txt'

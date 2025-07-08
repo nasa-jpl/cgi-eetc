@@ -1,0 +1,13 @@
+# Data from Teledyne via P. Morrissey 6/14/22.
+# e2v designation 05-08 (batch 20361)
+# internal designation sn027 (former flight spare)
+4420 0.628
+4500 0.695
+4880 0.779
+5800 0.837
+6850 0.737
+7300 0.640
+8300 0.412
+8800 0.264
+9500 0.116
+9800 0.068

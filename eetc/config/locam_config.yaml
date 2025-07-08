@@ -1,0 +1,27 @@
+# dark current (e- / second)
+darke: 2.8e-3
+# clock-induced charge (e- / pixel)
+cic: 0.020
+
+# fraction of pixel full well to allow frame to use
+alpha0: 1.0
+# pixel full well (e-)
+fwc: 98000
+# fraction of serial full well to allow frame to use
+alpha1: 1.0
+# serial full well (e-) -- (possibly) product of gain and photons
+fwc_em: 100000
+
+# Maximum commandable gain in CGI FSW
+g_max_comm: 3500
+# Maximum gain permissible given lifetime/aging constraints
+g_max_age: 1500
+# Maximum post-gain electrons/pixel/frame given lifetime/aging constraints
+e_max_age: 96000
+# Exposure time per LOCAM frame
+# 443us of exposure time (from fix in PFR 218298) + readout smear (worst case
+# is 7.3us/row readout + 1.3us/row backclock for 38 rows across pupi1 =
+# 326.8us) for total 769.8us
+tframe: 0.0007698
+# number of sigma above mean to use as part of the cutoff for max counts
+n: 4

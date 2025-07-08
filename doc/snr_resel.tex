@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{color}
+
+\newcommand{\dd}[2]{\frac{\partial\,#1}{\partial\,#2}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\title{EXCAM exposure time calculators for spatial resolution element (resel), analog and photon counting}
+\author{Kevin Ludwick}
+
+\begin{document}
+\maketitle
+
+%\section{Flux for a resel}
+
+For a given observational sequence and target, the method {\tt calc\_flux\_rate()} in the class {\tt CGIEETC} provides the outputs {\tt flux\_rate} ($\phi_{tot}$, the integrated photon flux) and
+{\tt flux\_rate\_peak\_pix} ($\phi_b$, the photon flux for the peak pixel).
+These two are related in this way:
+\begin{equation}
+\label{tot_b_rel}
+\phi_b = \phi_{tot} x,
+\end{equation}
+where $x$ is the ratio of the flux from the peak pixel to the integrated flux, which can be found in {\tt sequences.yaml}.
+
+The functions {\tt calc\_exp\_time\_resel()} and {\tt calc\_pc\_exp\_time\_resel()} optimize considering the signal-to-noise ratio (SNR) per resel, in the analog and photon-counting cases respectively.
+We can get $\phi_{resel}$, the flux in a resel, in the following way:
+\begin{equation}
+\phi_{resel} = \phi_{tot} f,
+\end{equation}
+where $f$ is the fraction of the integrated flux that is in the resel.
+
+We can utilize the calculator functions in {\tt excam\_tools.py}, which can consider the SNR on a per-pixel or multi-pixel basis, by
+using the average flux per resel pixel, $\phi_{resel}/n$, where $n$ is the number of pixels in the resel.
+The functions {\tt calc\_exp\_time\_resel()} and {\tt calc\_pc\_exp\_time\_resel()} use $\phi_{resel}/n$ as the input flux, and
+they use the peak pixel's flux $\phi_b$ as usual for saturation constraints.  The functions then output the SNR per resel.
+
+For reference, the SNR per average pixel for the analog case without any correction for cosmic rays is
+\begin{align}
+    SNR(g, t_{fr}, N) &=  \frac{\phi_{ij} t_{fr}}{\sqrt{\frac{1}{N \eta_{ij}^2} \left(\frac{\sigma_{r}^2}{g^2} + F(g)^2  \left[\phi_{ij} \eta_{ij} t_{fr} + i_{d} t_{fr} + C\right]\right)}} \equiv \frac{S}{\sqrt{no^2}}.
+\end{align}
+The numerator is the average signal per pixel $S$, and the denominator is the average noise per pixel $no$.  $\phi_{ij}$ is the photon flux per pixel, $\eta_{ij}$ is the quantum efficiency per pixel (in $e^-$/photon), $t_{fr}$ is the exposure time per frame, $N$ is the number of frames,
+$g$ is the EM gain, and $F(g)$ is known as the extra noise factor.  (See {\tt etc\_snr\_v3b.pdf} in the {\tt doc} folder of {\tt EETC} for more details.)
+The read noise $\sigma_r$, dark current $i_d$, and clock-induced charge $C$ are the values corresponding to a single pixel.  These noise sources are not correlated among pixels, so we can write the SNR for $n$ pixels ($SNR_{n}$) in terms of the SNR per pixel by summing the total signal and dividing by the total noise:
+\begin{equation}
+SNR_n(g, t_{fr}, N) = \frac{ \sum_i S_i}{\sqrt{ \sum_i no_i^2}} = \frac{n S}{ \sqrt{n} \sqrt{no^2}} = \sqrt{n} ~ SNR(g,t_{fr}, N).
+\end{equation}
+This logic is valid for both analog and photon-counting observations.
+
+
+The correction factor for cosmic rays (CRs) is applied to the number of frames taken, $N$.  It accounts for the fact that a pixel that is invalidated by a CR hit needs more frames taken to compensate.  That correction factor acts as such:
+\begin{align}
+    N \rightarrow N e^{-X a t_{fr} \ell_{ij}}.
+\end{align}
+$X$ is the rate of cosmic ray hits per unit area, $a$ is the area per pixel, and $\ell_{ij}$ is the number of pixels per row that must not be hit in order for the pixel in question not to be invalidated due to spillover of electrons from cosmic ray hits.
+(See {\tt etc\_snr\_v3b.pdf} in the {\tt doc} folder of {\tt EETC} for more details.)  Let us model a resel of $n$ pixels as a circle of pixels, which would have a diameter of $\sqrt{4 n/\pi}$.  The number of pixels that must be protected $\ell_{ij}$ is typically fairly large, and
+so each row of $\sqrt{n}$ pixels in the resel would likely all be protected by $\ell_{ij}$.  So the correction for one pixel in the above equation is, on average, valid for each row in the resel, with the longest row of resel pixels being of length equal to the diameter.  Therefore, to correct for CRs for the circular resel, we need to correct for $\sqrt{4 n/\pi}$ rows, so we need
+\begin{equation}
+    N_n = N e^{-X \sqrt{4 n/\pi} a t_{fr} \ell_{ij}}.
+\end{equation}
+
+Therefore, for both analog and photon-counting modes, the SNR per resel is
+\begin{equation}
+SNR_n(g,t_{fr},N_n) = \sqrt{n} ~ SNR(g,t_{fr}, N_n).
+\end{equation}
+
+We perform the same optimization process we do for SNR per pixel for SNR per resel by using the above expression for SNR.
+
+\end{document}

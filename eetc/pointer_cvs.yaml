@@ -1,0 +1,18 @@
+# observing sequence configurations
+sequences: 'config/sequences_cvs.yaml'
+# OTA / CGI throughput configurations
+thpt_configs: 'config/thpt_configs.yaml'
+# OTA / CGI throughput data info (mapping strings to data curves)
+thpt_coatings: 'config/thpt_coatings.yaml'
+# OTA / CGI throughput data info (mapping strings to data curves)
+thpt_data: 'config/thpt_data.yaml'
+# Directory containing throughput curve files
+thptcurves_dir: 'thptcurves'
+# EXCAM EMCCD configuration
+excam_config: 'config/excam_config.yaml'
+# LOCAM EMCCD configuration
+locam_config: 'config/locam_config.yaml'
+# flux grid file, synthetic spectra
+flux_grid: 'flux_grid_generation/grid_files/flux_grid.fits'
+# wavelength grid file, synthetic spectra
+wave_grid: 'flux_grid_generation/grid_files/wave_grid.fits'

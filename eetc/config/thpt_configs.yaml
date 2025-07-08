@@ -1,0 +1,97 @@
+# throughput model
+
+excam_imaging:
+# OTA + TCA
+  PM: 'hrc'
+  SM: 'hrc'
+  POMA_F1: 'hrc'
+  TOMA_M3: 'hrc'
+  TOMA_M4: 'hrc'
+  TOMA_M5: 'hrc'
+  TOMA_TTF: 'hrc'
+# CGI
+  FSM: '8-8732R'
+  OAP1: '6-8648R'
+  FocM: '8-8380R'
+  OAP2: '6-8648R'
+  DM1: '1MM48-009'
+  DM2: '1MM48-008'
+  OAP3: '6-8648R'
+  SFM: '8-8261R'
+  OAP4: '6-8763R'
+  OAP5: '6-8763R'
+  OAP6: '6-8763R'
+  OAP7: '6-8763R'
+  OAP8: '6-8648R'
+  Rad_shield_mirror: '8-8431R'
+  EXCAM: 'qe_excam' # QE curve
+
+locam:
+# OTA + TCA
+  PM: 'hrc'
+  SM: 'hrc'
+  POMA_F1: 'hrc'
+  TOMA_M3: 'hrc'
+  TOMA_M4: 'hrc'
+  TOMA_M5: 'hrc'
+  TOMA_TTF: 'hrc'
+# CGI
+  FSM: '8-8732R'
+  OAP1: '6-8648R'
+  FocM: '8-8380R'
+  OAP2: '6-8648R'
+  DM1: '1MM48-009'
+  DM2: '1MM48-008'
+  OAP3: '6-8648R'
+  SFM: '8-8261R'
+  OAP4: '6-8763R'
+  OAP5: '6-8763R'
+# branch to LOCAM
+  LOBE1: 'SBSL7R' # Ohara S-BSL7R
+  LOBE2: 'PBM2R' # Ohara PBM2R
+# LOBE3 is filter, handled same as CFAM
+  LOBE4: 'PBM2R' # Ohara PBM2R
+  LOBE5: 'broadband_ar' # CORNING 7980-0AA fused silica
+  Rad_shield_mirror: '8-8431R'
+  LOCAM: 'qe_locam' # QE curve
+
+excam_imaging_cvs:
+# CGI
+  FSM: '8-8732R'
+  OAP1: '6-8648R'
+  FocM: '8-8380R'
+  OAP2: '6-8648R'
+  DM1: '1MM48-009'
+  DM2: '1MM48-008'
+  OAP3: '6-8648R'
+  SFM: '8-8261R'
+  OAP4: '6-8763R'
+  OAP5: '6-8763R'
+  OAP6: '6-8763R'
+  OAP7: '6-8763R'
+  OAP8: '6-8648R'
+  Rad_shield_mirror: '8-8431R'
+  EXCAM: 'qe_excam' # QE curve
+  
+locam_cvs:
+# CGI
+  FSM: '8-8732R'
+  OAP1: '6-8648R'
+  FocM: '8-8380R'
+  OAP2: '6-8648R'
+  DM1: '1MM48-009'
+  DM2: '1MM48-008'
+  OAP3: '6-8648R'
+  SFM: '8-8261R'
+  OAP4: '6-8763R'
+  OAP5: '6-8763R'
+# branch to LOCAM
+  LOBE1: 'SBSL7R' # Ohara S-BSL7R
+  LOBE2: 'PBM2R' # Ohara PBM2R
+# LOBE3 is filter, handled same as CFAM
+  LOBE4: 'PBM2R' # Ohara PBM2R
+  LOBE5: 'broadband_ar' # CORNING 7980-0AA fused silica
+  Rad_shield_mirror: '8-8431R'
+  LOCAM: 'qe_locam' # QE curve
+
+  

@@ -1,0 +1,11 @@
+# Filter transmission curve produced by Materion. 
+#Truncated at T<1% due to measurement noise. 
+#True CGI curve may differ slightly (TBD) due to difference in f/number in Materion test setup and vacuum vs. air. 
+lambda_nm,%T
+400.,0.
+450.,0.
+500.,0.
+600.,4.26e-18
+700.,4.26e-18
+800.,0.
+900.,0.

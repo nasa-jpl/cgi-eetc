@@ -1,0 +1,59 @@
+# throughput model
+
+excam_imaging:
+# OTA + TCA
+  PM: 'hrc'
+  SM: 'hrc'
+  POMA_F1: 'hrc'
+  TOMA_M3: 'hrc'
+  TOMA_M4: 'hrc'
+  TOMA_M5: 'hrc'
+  TOMA_TTF: 'hrc'
+# CGI
+  FSM: 'IOI'  # 'IOI-6-8301R'
+  OAP1: 'IOI'  # 'IOI-6-8301R'
+  FocM: 'IOI'  # 'IOI-6-8301R'
+  OAP2: 'IOI'  # 'IOI-6-8301R'
+  DM1: 'alum'
+  DM2: 'alum'
+  OAP3: 'IOI'  # 'IOI-6-8301R'
+  SFM: 'IOI'  # 'IOI-6-8301R'
+  OAP4: 'IOI'  # 'IOI-6-8301R'
+  OAP5: 'IOI'  # 'IOI-6-8301R'
+  OAP6: 'IOI'  # 'IOI-6-8301R'
+  OAP7: 'IOI'  # 'IOI-6-8301R'
+  OAP8: 'IOI'  # 'IOI-6-8301R'
+  Rad_shield_mirror: 'IOI'  # 'IOI-6-8301R'
+  EXCAM: 'qe_excam' # QE curve
+
+locam:
+# OTA + TCA
+  PM: 'hrc'
+  SM: 'hrc'
+  POMA_F1: 'hrc'
+  TOMA_M3: 'hrc'
+  TOMA_M4: 'hrc'
+  TOMA_M5: 'hrc'
+  TOMA_TTF: 'hrc'
+# CGI
+  FSM: 'IOI'  # 'IOI-6-8301R'
+  OAP1: 'IOI'  # 'IOI-6-8301R'
+  FocM: 'IOI'  # 'IOI-6-8301R'
+  OAP2: 'IOI'  # 'IOI-6-8301R'
+  DM1: 'alum'
+  DM2: 'alum'
+  OAP3: 'IOI'  # 'IOI-6-8301R'
+  SFM: 'IOI'  # 'IOI-6-8301R'
+  OAP4: 'IOI'  # 'IOI-6-8301R'
+# branch to LOCAM
+  SPM: 'IOI'  # 'IOI-6-8301R'
+  Lens1: 'broadband_ar'
+  Lens2: 'broadband_ar'
+  Lens3: 'broadband_ar'
+  Rad_shield_mirror: 'IOI'  # 'IOI-6-8301R'
+  LOCAM: 'qe_locam' # QE curve
+
+ut_only:
+  foo: 'hrc'
+  bar: 'hrc'
+  baz: 'IOI'

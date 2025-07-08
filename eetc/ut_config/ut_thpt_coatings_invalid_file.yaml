@@ -1,0 +1,7 @@
+# Throughputs for each type of coating
+hrc: 'does_not_exist' # Invalid coating filename
+IOI: 'static_optics/IOI-6-8301R8deg.txt'
+alum: 'static_optics/alum.txt'
+broadband_ar: 'static_optics/ar_glass.dat'
+qe_excam: 'qe/e2v_excam.txt'
+qe_locam: 'qe/e2v_locam.txt'

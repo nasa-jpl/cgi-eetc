@@ -1,0 +1,14 @@
+# Throughputs for each setting
+spam_lsam:
+    open_spam_open_lsam: 'spam_lsam/open_spam_open_lsam.txt'
+fpam:
+    open: 'fpam/open.txt'
+    nfov_dm_reflect: 'fpam/nfov_dm_reflect.txt' # for LOCAM
+fsam:
+    open: 'fsam/open.txt'
+dpam:
+    imaging_lens: 'dpam/imaging_lens.txt'
+    pupil_lens: 'dpam/pupil_lens.txt'
+    defocus_1: 'dpam/defocus_1.txt'
+    open: 'dpam/open.txt' # for LOCAM use
+

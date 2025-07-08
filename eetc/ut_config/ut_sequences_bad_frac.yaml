@@ -1,0 +1,18 @@
+# ratio of peak flux per pixel to integrated flux in PSF image
+#cgisim now lists what we call '1f', '2f', '3f', and '4f'
+#as '1', '2', '3', and '4' respectively
+
+
+# CGI_SEQ_DATA_SECONDARY_PR_DEFOCUS_1
+CGI_SEQ_DATA_SECONDARY_PR_DEFOCUS_1:
+    mode: 'excam_imaging'
+    dms: 'hlc_flattened'
+    spam_lsam: 'open_spam_open_lsam'
+    fpam: 'open'
+    fsam: 'open'
+    cfam: '1B'
+    dpam: 'defocus_1'
+    # ratio of peak flux per pixel to integrated flux in PSF image
+    peak_flux_ratio_pix: 0.01
+    num_pixels: 4
+    fraction: 'foo'

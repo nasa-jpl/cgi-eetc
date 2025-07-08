@@ -1,0 +1,73 @@
+# ratio of peak flux per pixel to integrated flux in PSF image
+#cgisim now lists what we call '1f', '2f', '3f', and '4f'
+#as '1', '2', '3', and '4' respectively
+
+# For unit tests, only keep a few
+
+# CGI_SEQ_DATA_SECONDARY_PR_DEFOCUS_1
+CGI_SEQ_DATA_SECONDARY_PR_DEFOCUS_1:
+    mode: 'excam_imaging'
+    dms: 'hlc_flattened'
+    spam_lsam: 'open_spam_open_lsam'
+    fpam: 'open'
+    fsam: 'open'
+    cfam: '1B'
+    dpam: 'defocus_1'
+    # ratio of peak flux per pixel to integrated flux in PSF image
+    peak_flux_ratio_pix: 9.147120873915602e-05
+    num_pixels: null
+    fraction: null
+
+CGI_SEQ_DATA_SECONDARY_PR_INFOCUS:
+  mode: excam_imaging
+  dms: hlc_flattened
+  spam_lsam: open_spam_open_lsam
+  fpam: open
+  fsam: open
+  cfam: 1B
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.02128157609673454
+  num_pixels: 26.0
+  fraction: 0.2877066115395353
+
+# ut_cgi_eetc.py wants this one
+CGI_SEQ_NFOV_ALIGN_LSAM_0_UT:
+    mode: 'excam_imaging'
+    dms: 'hlc_flattened'
+    spam_lsam: 'open_spam_open_lsam'
+    fpam: 'open'
+    fsam: 'open'
+    cfam: '1F'
+    dpam: 'pupil_lens'
+    # ratio of peak flux per pixel to integrated flux in PSF image
+    peak_flux_ratio_pix: 1                   #CHANGED
+    num_pixels: 1
+    fraction: null
+
+
+# ut_cgi_eetc.py wants this one
+CGI_SEQ_NFOV_ALIGN_LSAM_1_UT:
+    mode: 'excam_imaging'
+    dms: 'hlc_flattened'
+    spam_lsam: 'open_spam_open_lsam' # changed from nfov_lsam for unit test
+    fpam: 'open'
+    fsam: 'open'
+    cfam: '1F'
+    dpam: 'pupil_lens'
+    # ratio of peak flux per pixel to integrated flux in PSF image
+    peak_flux_ratio_pix: 0.5                   #CHANGED
+    num_pixels: null
+    fraction: 0.01
+
+
+LOCAM_NFOV_DM:
+  mode: locam
+  dms: hlc_flattened_with_pattern
+  spam_lsam: open_spam_open_lsam
+  fpam: nfov_dm_reflect
+  fsam: open
+  cfam: LOBE
+  dpam: open
+  peak_flux_ratio_pix: 0.001004466
+  num_pixels : null
+  fraction: null

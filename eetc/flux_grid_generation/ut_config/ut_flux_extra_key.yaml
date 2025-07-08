@@ -1,0 +1,22 @@
+# reference magnitude and bands at which to compute grid
+magref:  6.
+magbands:  ['ut_filter']
+# master wavelength array parameters [Ang]
+wvl:
+  min:  3000.
+  max:  10000.
+  step: 1.
+# input files
+input_files:
+  # CFAM filter curve
+  cfam_filter_curve_path: 'ut_cfam_filter_curves_err'
+  # stellar model path
+  stellar_model_spec_path: 'ut_bpgs_atlas_csv_err'
+# output grid fits files -- will be used by cgi_eetc
+output_flux_grid_file: 'grid_files/ut_flux_grid.fits'
+# output grid fits files -- will be used by cgi_eetc
+output_wave_grid_file: 'grid_files/ut_wave_grid.fits'
+# OTA collecting area (obscurations included)
+ota_collecting_area: 35895.212  # cm^2
+#
+extra_key: 'key'  # cm^2

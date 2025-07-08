@@ -1,0 +1,20 @@
+# TEST ALL VALID YAML None INPUTS
+
+# observing sequence configurations
+sequences: null
+# OTA / CGI throughput configurations
+thpt_configs: ~
+# OTA / CGI throughput data info (mapping strings to data curves)
+thpt_coatings: Null
+# OTA / CGI throughput data info (mapping strings to data curves)
+thpt_data: ~
+# Directory containing throughput curve files
+thptcurves_dir: null
+# EXCAM EMCCD configuration
+excam_config: ~
+# LOCAM EMCCD configuration
+locam_config: NULL
+# flux grid file, synthetic spectra
+flux_grid:
+# wavelength grid file, synthetic spectra
+wave_grid:
