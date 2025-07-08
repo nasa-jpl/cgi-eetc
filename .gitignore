@@ -1,0 +1,45 @@
+*~
+*.DS_Store
+*.pyc
+*/__pycache__/
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+.coverage
+htmlcov/
+
+# VS Code
+*.vscode/
+
+# Jupyter
+.ipynb_checkpoints
+*.m~
+*.asv
+*.bak
+
+# diff
+diff/
+doc/etc_snr_v3b.synctex.gz
+doc/snr_resel.aux
+doc/snr_resel.fdb_latexmk
+doc/snr_resel.fls
+doc/snr_resel.log
+doc/snr_resel.synctex.gz
+doc/~$anetary_sequences.docx
