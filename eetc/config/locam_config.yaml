@@ -4,11 +4,11 @@ darke: 2.8e-3
 cic: 0.020
 
 # fraction of pixel full well to allow frame to use
-alpha0: 1.0
+alpha0: 0.5 # start IOC with 0.5 until flux models are calibrated empirically
 # pixel full well (e-)
 fwc: 98000
 # fraction of serial full well to allow frame to use
-alpha1: 1.0
+alpha1: 0.5 # start IOC with 0.5 until flux models are calibrated empirically
 # serial full well (e-) -- (possibly) product of gain and photons
 fwc_em: 100000
 

@@ -1,9 +1,9 @@
 # dark current (e- / second)
-darke: 8.2e-4
+darke: 1.0e-3
 # clock-induced charge (e- / pixel)
 cic: 1.0e-2
 # read noise (e- / pixel)
-rn: 165.0
+rn: 178.0
 
 # cosmic ray hit rate (hits/m**2/sec)
 X: 5.0e+04
@@ -11,19 +11,19 @@ X: 5.0e+04
 a: 1.69e-10
 # number of pixels that would take out a target pixel if they were hit by a
 # CR (integer number of pixels)
-Lij: 512
+Lij: 57
 
 # fraction of pixel full well to allow frame to use
-alpha0: 1.0
+alpha0: 0.75 # use 0.5 to start IOC and 0.75 for 1st semester planning purposes, assuming recalibration during IOC
 # pixel full well (e-)
 fwc: 90000
 # fraction of serial full well to allow frame to use
-alpha1: 1.0
+alpha1: 0.75 # use 0.5 to start IOC and 0.75 for 1st semester planning purposes, assuming recalibration during IOC
 # serial full well (e-) -- (possibly) product of gain and photons
 fwc_em: 100000
 
 # Minimum number of images permitted in a data collection activity
-Nmin: 1
+Nmin: 3
 # Maximum number of images permitted in a data collection activity
 Nmax: 49
 # Minimum allowable exposure time (seconds/frame)
@@ -48,7 +48,7 @@ delta_constr: 1.0e-4
 # total wall-clock time for data collection
 overhead: 12
 # Maximum allowed electrons/pixel/frame for photon counting
-pc_ecount_max: 0.1
+pc_ecount_max: 0.25 # increased from 0.1
 # number of read noise standard deviations at which to set the
 # photon-counting threshold
 T_factor: 5

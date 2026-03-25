@@ -5,6 +5,7 @@
 """
 Functions for loading, unpacking, parsing, and validating eetc files.
 """
+import os
 import copy
 from pathlib import Path
 
@@ -114,6 +115,7 @@ def load_sequences(sequences_path, valid_modes, valid_spam_lsam, valid_fpam,
     """
     # Check inputs
     check.string(sequences_path, 'sequences_path', TypeError)
+    sequences_path = os.path.expandvars(sequences_path)
 
     if not isinstance(valid_modes, set):
         raise TypeError('valid_modes must be a set')
@@ -293,6 +295,12 @@ def load_thpt_configs(thpt_configs_path,
     check.string(thpt_coatings_path, 'thpt_coatings_path', TypeError)
     check.string(thpt_data_path, 'thpt_data_path', TypeError)
     check.string(thptcurves_dir_path, 'thptcurves_dir_path', TypeError)
+
+    thpt_configs_path = os.path.expandvars(thpt_configs_path)
+    thpt_coatings_path = os.path.expandvars(thpt_coatings_path)
+    thpt_data_path = os.path.expandvars(thpt_data_path)
+    thptcurves_dir_path = os.path.expandvars(thptcurves_dir_path)
+
     if not Path(thptcurves_dir_path).is_dir():
         raise IOError('thptcurves_dir directory not found')
 
@@ -328,6 +336,7 @@ def load_thpt_configs(thpt_configs_path,
     for i in coating_thptcurves.keys():
         check.string(coating_thptcurves[i], str(coating_thptcurves[i]),
                      TypeError)
+        coating_thptcurves[i] = os.path.expandvars(coating_thptcurves[i])
         fn_coating = Path(thptcurves_dir_path, coating_thptcurves[i])
         if not fn_coating.is_file():
             raise IOError(str(fn_coating) + ' is not a file')
@@ -365,6 +374,7 @@ def load_thpt_configs(thpt_configs_path,
             raise TypeError('thpt_data file contains invalid top-level keys')
         for setting, filename in element_dict.items():
             check.string(filename, 'filename', TypeError)
+            filename = os.path.expandvars(filename)
             fn = Path(thptcurves_dir_path, filename)
             if not fn.is_file():
                 raise IOError(str(fn) + ' is not a file')
@@ -382,6 +392,8 @@ def _load_thptcurve(thptcurve_path):
 
     Internal only; this is tied up in the details of the dict definition
     """
+    thptcurve_path = os.path.expandvars(thptcurve_path)
+
     # Read file
     try:
         lams, thpts = np.loadtxt(thptcurve_path, unpack=True)
@@ -423,7 +435,7 @@ def load_excam_config(excam_config_path):
 
     # Load dictionary from file and validate
     try:
-        with open(excam_config_path, 'r') as stream:
+        with open(os.path.expandvars(excam_config_path), 'r') as stream:
             excam_config = yaml.safe_load(stream)
     except FileNotFoundError:
         raise IOError('excam_config file not found')
@@ -536,7 +548,7 @@ def load_locam_config(locam_config_path):
 
     # Load dictionary from file and validate
     try:
-        with open(locam_config_path, 'r') as stream:
+        with open(os.path.expandvars(locam_config_path), 'r') as stream:
             locam_config = yaml.safe_load(stream)
     except FileNotFoundError:
         raise IOError('locam_config file not found')
@@ -645,7 +657,7 @@ def load_flux_grid(flux_grid_path):
 
     # Load HDUList (Header Data Unit List) and validate
     try:
-        with fits.open(flux_grid_path) as hdul_raw:
+        with fits.open(os.path.expandvars(flux_grid_path)) as hdul_raw:
             hdul = copy.deepcopy(hdul_raw)
     except FileNotFoundError:
         raise IOError('flux_grid file not found')
@@ -768,7 +780,7 @@ def load_wave_grid(wave_grid_path):
 
     # Load HDUList (Header Data Unit List) and validate
     try:
-        with fits.open(wave_grid_path) as hdul_raw:
+        with fits.open(os.path.expandvars(wave_grid_path)) as hdul_raw:
             hdul = copy.deepcopy(hdul_raw)
     except FileNotFoundError:
         raise IOError('wave_grid file not found')

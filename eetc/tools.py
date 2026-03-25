@@ -75,6 +75,7 @@ def get_signal_ratio(mag1, spt1, gain1, mag2, spt2, gain2, sequence_name,
     check.string(sequence_name, 'sequence_name', TypeError)
     # check sequence content below (see note)
     check.string(pointer_path, 'pointer_path', TypeError)
+    pointer_path = os.path.expandvars(pointer_path)
     if not os.path.exists(pointer_path):
         raise ValueError('pointer_path must point at an existing file')
 
@@ -144,6 +145,7 @@ def get_effective_wavelength(cfam, spt, pointer_path=POINTER_PATH):
         raise TypeError('cfam must be a list of filters')
     check.string(spt, 'spt', TypeError)
     check.string(pointer_path, 'pointer_path', TypeError)
+    pointer_path = os.path.expandvars(pointer_path)
     if not os.path.exists(pointer_path):
         raise ValueError('pointer_path must point at an existing file')
 

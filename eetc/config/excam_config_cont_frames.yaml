@@ -3,7 +3,7 @@ darke: 1.0e-3
 # clock-induced charge (e- / pixel)
 cic: 1.0e-2
 # read noise (e- / pixel)
-rn: 178.0
+rn: 165.0
 
 # cosmic ray hit rate (hits/m**2/sec)
 X: 5.0e+04
@@ -27,7 +27,7 @@ Nmin: 1
 # Maximum number of images permitted in a data collection activity
 Nmax: 1000
 # Minimum allowable exposure time (seconds/frame)
-tmin: 0.1 # used to be 0.002 s
+tmin: 2.0  #
 # Maximum allowable exposure time (seconds/frame)
 tmax: 120.0
 # Maximum allowable EM gain
@@ -46,7 +46,7 @@ tol: 1.0e-30
 delta_constr: 1.0e-4
 # Overhead time, in seconds, for each collected frame.  Used to compute
 # total wall-clock time for data collection
-overhead: 3.264 # includes readout time and transfer time from individual frame mode
+overhead: 0.264 # includes only readout time for cont frame mode
 # Maximum allowed electrons/pixel/frame for photon counting
 pc_ecount_max: 0.25 # increased from 0.1
 # number of read noise standard deviations at which to set the
