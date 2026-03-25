@@ -136,7 +136,7 @@ class CGIEETC:
         self.mag = mag
         self.phot = phot.lower() #so that input spt can be case-insensitive
         self.spt = spt.upper()
-        self.pointer_path = pointer_path
+        self.pointer_path = os.path.expandvars(pointer_path)
 
         # Load pointer file and validate
         try:
@@ -304,7 +304,7 @@ class CGIEETC:
         Returns
         -------
         flux_rate_cfam : float
-            Estiamted flux rate at entrance to OTA through specified CFAM
+            Estimated flux rate at entrance to OTA through specified CFAM
             filter (photons / sec).
 
         """

@@ -38,6 +38,7 @@ def _abs_or_rel_path(path, rel=None):
     optional input rel, which must be an absolute path itself.
     """
     check.string(path, path, TypeError)
+    path = os.path.expandvars(path)
     if rel is None:
         rel = os.path.dirname(os.path.realpath(__file__))
     if os.path.isabs(path):
@@ -141,7 +142,7 @@ def cgi_flux_grid_generate(input_file=YAML_GRID_INPUT,
     # master flux grid file
     if output_flux_grid_file is not None:
         check.string(output_flux_grid_file, 'output_flux_grid_file', TypeError)
-        grid_fits_filename = output_flux_grid_file
+        grid_fits_filename = os.path.expandvars(output_flux_grid_file)
     else:
         grid_fits_filename = _abs_or_rel_path(
                                         input_dicts['output_flux_grid_file'])
@@ -149,7 +150,7 @@ def cgi_flux_grid_generate(input_file=YAML_GRID_INPUT,
     # wave centroid grid file name
     if output_wave_grid_file is not None:
         check.string(output_wave_grid_file, 'output_wave_grid_file', TypeError)
-        grid_wave_fits_filename = output_wave_grid_file
+        grid_wave_fits_filename = os.path.expandvars(output_wave_grid_file)
     else:
         grid_wave_fits_filename = _abs_or_rel_path(
                                         input_dicts['output_wave_grid_file'])

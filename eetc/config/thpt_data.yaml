@@ -8,6 +8,8 @@ spam_lsam:
     #open_spam_wfov_lsam: 'does_not_exist'
     spec_spam_spec_lsam: 'spam_lsam/spec_spam_spec_lsam.txt'
     wfov_spam_wfov_lsam: 'spam_lsam/wfov_spam_wfov_lsam.txt'
+    specrot_spam_open_lsam: 'spam_lsam/specrot_spam_open_lsam.txt'
+    specrot_spam_specrot_lsam: 'spam_lsam/specrot_spam_specrot_lsam.txt'
 fpam:
     open_12: 'fpam/open_12.txt'
     open_34: 'fpam/open_34.txt'
@@ -28,7 +30,7 @@ dpam:
     defocus_2: 'dpam/defocus_2.txt'
     defocus_3: 'dpam/defocus_3.txt'
     defocus_4: 'dpam/defocus_4.txt'
-    zod600: 'dpam/zod600.txt'
+    zod660: 'dpam/zod660.txt'
     zod730: 'dpam/zod730.txt'
     wol0: 'dpam/wol0.txt'
     wol45: 'dpam/wol45.txt'

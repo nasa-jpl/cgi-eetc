@@ -72,7 +72,7 @@ def _spectrum_load_csv(spt, spec_path, wvl=None):
     check.string(spec_path, 'spec_path', TypeError)
 
     # path to fits file directory containing spectra
-    spec_csv = os.path.join(spec_path, spt + '.txt')
+    spec_csv = os.path.join(os.path.expandvars(spec_path), spt + '.txt')
 
     # Read file
     try:
@@ -141,7 +141,7 @@ def _spectrum_scale(wvl, spec, mag, filter_band, mag_zero_point_file=MAG_ZERO_PO
 
     Returns
     -------
-    flxu_scaled : :obj:`ndarray` of :obj:`float`
+    flux_scaled : :obj:`ndarray` of :obj:`float`
         Scaled spectrum in flux units [Ergs/sec/cm^2/Ang]
 
     S Halverson - JPL - 29-Sep-2019
@@ -153,11 +153,11 @@ def _spectrum_scale(wvl, spec, mag, filter_band, mag_zero_point_file=MAG_ZERO_PO
     check.string(filter_band, 'filter_band', TypeError)
     check.string(mag_zero_point_file, 'mag_zero_point_file', TypeError)
 
-    # capitalize for convinience
+    # capitalize for convenience
     filter_band = filter_band.capitalize()
 
     # Vega zero point magnitude numbers for specified band
-    with open(mag_zero_point_file, 'r') as stream:
+    with open(os.path.expandvars(mag_zero_point_file), 'r') as stream:
         data_filters = yaml.safe_load(stream)
 
     # reference data
@@ -167,7 +167,7 @@ def _spectrum_scale(wvl, spec, mag, filter_band, mag_zero_point_file=MAG_ZERO_PO
 
     # load in filter data from relevant text tile
     filter_file = os.path.join(LOCAL_PATH, data_filters[filter_band]['filter_file'])
-    filter_data = np.loadtxt(filter_file)
+    filter_data = np.loadtxt(os.path.expandvars(filter_file))
     wvl_filter = filter_data[:, 0]    #Ang
     trans_filter = filter_data[:, 1]    #filter transmission
 
@@ -242,7 +242,7 @@ def _spectrum_mag_estimate(wvl, spec, filter_band, mag_zero_point_file=MAG_ZERO_
     filter_band = filter_band.capitalize()
 
     # Vega zero point magnitude numbers for specified band
-    with open(mag_zero_point_file, 'r') as stream:
+    with open(os.path.expandvars(mag_zero_point_file), 'r') as stream:
         data_filters = yaml.safe_load(stream)
 
     # reference data
@@ -251,7 +251,7 @@ def _spectrum_mag_estimate(wvl, spec, filter_band, mag_zero_point_file=MAG_ZERO_
 
     # load in filter data from relevant text tile
     filter_file = os.path.join(LOCAL_PATH, data_filters[filter_band]['filter_file'])
-    filter_data = np.loadtxt(filter_file)
+    filter_data = np.loadtxt(os.path.expandvars(filter_file))
     wvl_filter = filter_data[:, 0]    #Ang
     trans_filter = filter_data[:, 1]    #filter transmission
 
@@ -374,7 +374,9 @@ def _get_cfam_transmission(filter_dir, filter_name, wvl):
 
     # Read file
     try:
-        wvl_file, trans_file = np.loadtxt(element_efficiency_file,
+        wvl_file, trans_file = np.loadtxt(os.path.expandvars(
+                                              element_efficiency_file,
+                                          ),
                                           delimiter=',', skiprows=4,
                                           unpack=True)
     except FileNotFoundError:

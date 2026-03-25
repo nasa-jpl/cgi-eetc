@@ -4,6 +4,6 @@
 # at the California Institute of Technology.
 import os.path as _osp
 
-__version__ = '3.0.0'
+__version__ = '3.1.0'
 
 lib_dir = _osp.abspath(_osp.dirname(__file__))
