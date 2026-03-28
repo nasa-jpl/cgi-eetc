@@ -2134,8 +2134,8 @@ OPEN_NFOV_1A_OPTDMS:
   cfam: 1A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03049489592286583
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.16735868010359362
 OPEN_NFOV_1A_OPTDMS_ND225:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2145,8 +2145,8 @@ OPEN_NFOV_1A_OPTDMS_ND225:
   cfam: 1A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03049489592286583
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.16735868010359362
 OPEN_NFOV_1A_OPTDMS_ND475:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2156,8 +2156,8 @@ OPEN_NFOV_1A_OPTDMS_ND475:
   cfam: 1A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03049489592286583
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.16735868010359362
 OPEN_NFOV_1B_OPTDMS:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2167,8 +2167,8 @@ OPEN_NFOV_1B_OPTDMS:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.029298044197383438
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17834739193675742
 OPEN_NFOV_1B_OPTDMS_ND225:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2178,8 +2178,8 @@ OPEN_NFOV_1B_OPTDMS_ND225:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.029298044197383438
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17834739193675742
 OPEN_NFOV_1B_OPTDMS_ND475:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2189,8 +2189,8 @@ OPEN_NFOV_1B_OPTDMS_ND475:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.029298044197383438
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17834739193675742
 OPEN_NFOV_1C_OPTDMS:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2200,8 +2200,8 @@ OPEN_NFOV_1C_OPTDMS:
   cfam: 1C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.028239380840450194
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17442247879056663
 OPEN_NFOV_1C_OPTDMS_ND225:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2211,8 +2211,8 @@ OPEN_NFOV_1C_OPTDMS_ND225:
   cfam: 1C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.028239380840450194
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17442247879056663
 OPEN_NFOV_1C_OPTDMS_ND475:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2222,8 +2222,8 @@ OPEN_NFOV_1C_OPTDMS_ND475:
   cfam: 1C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.028239380840450194
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17442247879056663
 OPEN_NFOV_1F_OPTDMS:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2233,8 +2233,8 @@ OPEN_NFOV_1F_OPTDMS:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.02935767966148732
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17827974158656906
 OPEN_NFOV_1F_OPTDMS_ND225:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2244,8 +2244,8 @@ OPEN_NFOV_1F_OPTDMS_ND225:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.02935767966148732
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17827974158656906
 OPEN_NFOV_1F_OPTDMS_ND475:
   mode: excam_imaging
   dms: hlc_cgisim_optdms
@@ -2255,8 +2255,8 @@ OPEN_NFOV_1F_OPTDMS_ND475:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.02935767966148732
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17827974158656906
 OPEN_NFOV_1A_SEED:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2266,8 +2266,8 @@ OPEN_NFOV_1A_SEED:
   cfam: 1A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03325023274875793
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.1719216014524165
 OPEN_NFOV_1A_SEED_ND225:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2277,8 +2277,8 @@ OPEN_NFOV_1A_SEED_ND225:
   cfam: 1A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03325023274875793
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.1719216014524165
 OPEN_NFOV_1A_SEED_ND475:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2288,8 +2288,8 @@ OPEN_NFOV_1A_SEED_ND475:
   cfam: 1A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03325023274875793
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.1719216014524165
 OPEN_NFOV_1B_SEED:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2299,8 +2299,8 @@ OPEN_NFOV_1B_SEED:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03174261146444211
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.16614669266798493
 OPEN_NFOV_1B_SEED_ND225:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2310,8 +2310,8 @@ OPEN_NFOV_1B_SEED_ND225:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03174261146444211
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.16614669266798493
 OPEN_NFOV_1B_SEED_ND475:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2321,8 +2321,8 @@ OPEN_NFOV_1B_SEED_ND475:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03174261146444211
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.16614669266798493
 OPEN_NFOV_1C_SEED:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2332,8 +2332,8 @@ OPEN_NFOV_1C_SEED:
   cfam: 1C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03042441265149286
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17931202077794595
 OPEN_NFOV_1C_SEED_ND225:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2343,8 +2343,8 @@ OPEN_NFOV_1C_SEED_ND225:
   cfam: 1C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03042441265149286
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17931202077794595
 OPEN_NFOV_1C_SEED_ND475:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2354,8 +2354,8 @@ OPEN_NFOV_1C_SEED_ND475:
   cfam: 1C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03042441265149286
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.17931202077794595
 OPEN_NFOV_1F_SEED:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2365,8 +2365,8 @@ OPEN_NFOV_1F_SEED:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03182195374409773
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.16612591508810068
 OPEN_NFOV_1F_SEED_ND225:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2376,8 +2376,8 @@ OPEN_NFOV_1F_SEED_ND225:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03182195374409773
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.16612591508810068
 OPEN_NFOV_1F_SEED_ND475:
   mode: excam_imaging
   dms: hlc_howfsc_seed
@@ -2387,9 +2387,9 @@ OPEN_NFOV_1F_SEED_ND475:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03182195374409773
-  num_pixels: null
-  fraction: null
-OPEN_Open_1B_FLATDMS:
+  num_pixels: 4.0
+  fraction: 0.16612591508810068
+OPEN_OPEN_1B_FLATDMS:
   mode: excam_imaging
   dms: hlc_flattened
   spam_lsam: open_spam_open_lsam
@@ -2398,9 +2398,9 @@ OPEN_Open_1B_FLATDMS:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.1038991544840773
-  num_pixels: null
-  fraction: null
-OPEN_Open_1B_FLATDMS_ND225:
+  num_pixels: 4.0
+  fraction: 0.3629674281327883
+OPEN_OPEN_1B_FLATDMS_ND225:
   mode: excam_imaging
   dms: hlc_flattened
   spam_lsam: open_spam_open_lsam
@@ -2409,9 +2409,9 @@ OPEN_Open_1B_FLATDMS_ND225:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.1038991544840773
-  num_pixels: null
-  fraction: null
-OPEN_Open_1B_FLATDMS_ND475:
+  num_pixels: 4.0
+  fraction: 0.3629674281327883
+OPEN_OPEN_1B_FLATDMS_ND475:
   mode: excam_imaging
   dms: hlc_flattened
   spam_lsam: open_spam_open_lsam
@@ -2420,8 +2420,8 @@ OPEN_Open_1B_FLATDMS_ND475:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.1038991544840773
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.3629674281327883
 WFOV_WFOV_1A_FLATDMS:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2431,8 +2431,8 @@ WFOV_WFOV_1A_FLATDMS:
   cfam: 1A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03832997665868434
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.22947968960991327
 WFOV_WFOV_1A_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2442,8 +2442,8 @@ WFOV_WFOV_1A_FLATDMS_ND225:
   cfam: 1A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03832997665868434
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.22947968960991327
 WFOV_WFOV_1A_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2453,8 +2453,8 @@ WFOV_WFOV_1A_FLATDMS_ND475:
   cfam: 1A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03832997665868434
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.22947968960991327
 WFOV_WFOV_1B_FLATDMS:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2464,8 +2464,8 @@ WFOV_WFOV_1B_FLATDMS:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.035686497026963485
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.2212217488996951
 WFOV_WFOV_1B_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2475,8 +2475,8 @@ WFOV_WFOV_1B_FLATDMS_ND225:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.035686497026963485
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.2212217488996951
 WFOV_WFOV_1B_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2486,8 +2486,8 @@ WFOV_WFOV_1B_FLATDMS_ND475:
   cfam: 1B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.035686497026963485
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.2212217488996951
 WFOV_WFOV_1C_FLATDMS:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2497,8 +2497,8 @@ WFOV_WFOV_1C_FLATDMS:
   cfam: 1C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.033450396811021646
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.2143317152848267
 WFOV_WFOV_1C_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2508,8 +2508,8 @@ WFOV_WFOV_1C_FLATDMS_ND225:
   cfam: 1C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.033450396811021646
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.2143317152848267
 WFOV_WFOV_1C_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2519,8 +2519,8 @@ WFOV_WFOV_1C_FLATDMS_ND475:
   cfam: 1C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.033450396811021646
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.2143317152848267
 WFOV_WFOV_1F_FLATDMS:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2530,8 +2530,8 @@ WFOV_WFOV_1F_FLATDMS:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03585362598318301
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.22151702726455652
 WFOV_WFOV_1F_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2541,8 +2541,8 @@ WFOV_WFOV_1F_FLATDMS_ND225:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03585362598318301
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.22151702726455652
 WFOV_WFOV_1F_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2552,8 +2552,8 @@ WFOV_WFOV_1F_FLATDMS_ND475:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.03585362598318301
-  num_pixels: null
-  fraction: null
+  num_pixels: 5.0
+  fraction: 0.22151702726455652
 WFOV_WFOV_4A_FLATDMS:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2563,8 +2563,8 @@ WFOV_WFOV_4A_FLATDMS:
   cfam: 4A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.02239868302579154
-  num_pixels: null
-  fraction: null
+  num_pixels: 8.0
+  fraction: 0.20768231472099402
 WFOV_WFOV_4A_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2574,8 +2574,8 @@ WFOV_WFOV_4A_FLATDMS_ND225:
   cfam: 4A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.02239868302579154
-  num_pixels: null
-  fraction: null
+  num_pixels: 8.0
+  fraction: 0.20768231472099402
 WFOV_WFOV_4A_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2585,8 +2585,8 @@ WFOV_WFOV_4A_FLATDMS_ND475:
   cfam: 4A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.02239868302579154
-  num_pixels: null
-  fraction: null
+  num_pixels: 8.0
+  fraction: 0.20768231472099402
 WFOV_WFOV_4B_FLATDMS:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2596,8 +2596,8 @@ WFOV_WFOV_4B_FLATDMS:
   cfam: 4B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021559359046103406
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.21615479605590687
 WFOV_WFOV_4B_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2607,8 +2607,8 @@ WFOV_WFOV_4B_FLATDMS_ND225:
   cfam: 4B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021559359046103406
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.21615479605590687
 WFOV_WFOV_4B_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2618,8 +2618,8 @@ WFOV_WFOV_4B_FLATDMS_ND475:
   cfam: 4B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021559359046103406
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.21615479605590687
 WFOV_WFOV_4C_FLATDMS:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2629,8 +2629,8 @@ WFOV_WFOV_4C_FLATDMS:
   cfam: 4C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.020839505968813534
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.20496371138979022
 WFOV_WFOV_4C_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2640,8 +2640,8 @@ WFOV_WFOV_4C_FLATDMS_ND225:
   cfam: 4C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.020839505968813534
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.20496371138979022
 WFOV_WFOV_4C_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2651,8 +2651,8 @@ WFOV_WFOV_4C_FLATDMS_ND475:
   cfam: 4C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.020839505968813534
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.20496371138979022
 WFOV_WFOV_4F_FLATDMS:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2662,8 +2662,8 @@ WFOV_WFOV_4F_FLATDMS:
   cfam: 4F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021709849789872355
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.2176188086579495
 WFOV_WFOV_4F_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2673,8 +2673,8 @@ WFOV_WFOV_4F_FLATDMS_ND225:
   cfam: 4F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021709849789872355
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.2176188086579495
 WFOV_WFOV_4F_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_wide_flattened
@@ -2684,8 +2684,8 @@ WFOV_WFOV_4F_FLATDMS_ND475:
   cfam: 4F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021709849789872355
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.2176188086579495
 WFOV_WFOV_4A_SEED:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2695,8 +2695,8 @@ WFOV_WFOV_4A_SEED:
   cfam: 4A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.022133502250496852
-  num_pixels: null
-  fraction: null
+  num_pixels: 8.0
+  fraction: 0.20459833306797995
 WFOV_WFOV_4A_SEED_ND225:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2706,8 +2706,8 @@ WFOV_WFOV_4A_SEED_ND225:
   cfam: 4A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.022133502250496852
-  num_pixels: null
-  fraction: null
+  num_pixels: 8.0
+  fraction: 0.20459833306797995
 WFOV_WFOV_4A_SEED_ND475:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2717,8 +2717,8 @@ WFOV_WFOV_4A_SEED_ND475:
   cfam: 4A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.022133502250496852
-  num_pixels: null
-  fraction: null
+  num_pixels: 8.0
+  fraction: 0.20459833306797995
 WFOV_WFOV_4B_SEED:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2728,8 +2728,8 @@ WFOV_WFOV_4B_SEED:
   cfam: 4B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021318782101882268
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.21272124589526095
 WFOV_WFOV_4B_SEED_ND225:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2739,8 +2739,8 @@ WFOV_WFOV_4B_SEED_ND225:
   cfam: 4B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021318782101882268
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.21272124589526095
 WFOV_WFOV_4B_SEED_ND475:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2750,8 +2750,8 @@ WFOV_WFOV_4B_SEED_ND475:
   cfam: 4B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021318782101882268
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.21272124589526095
 WFOV_WFOV_4C_SEED:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2761,8 +2761,8 @@ WFOV_WFOV_4C_SEED:
   cfam: 4C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.020618720652994083
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.2019383166594832
 WFOV_WFOV_4C_SEED_ND225:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2772,8 +2772,8 @@ WFOV_WFOV_4C_SEED_ND225:
   cfam: 4C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.020618720652994083
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.2019383166594832
 WFOV_WFOV_4C_SEED_ND475:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2783,8 +2783,8 @@ WFOV_WFOV_4C_SEED_ND475:
   cfam: 4C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.020618720652994083
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.2019383166594832
 WFOV_WFOV_4F_SEED:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2794,8 +2794,8 @@ WFOV_WFOV_4F_SEED:
   cfam: 4F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021464362550206728
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.21211912881386388
 WFOV_WFOV_4F_SEED_ND225:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2805,8 +2805,8 @@ WFOV_WFOV_4F_SEED_ND225:
   cfam: 4F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021464362550206728
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.21211912881386388
 WFOV_WFOV_4F_SEED_ND475:
   mode: excam_imaging
   dms: spc_wide_howfsc_seed
@@ -2816,8 +2816,8 @@ WFOV_WFOV_4F_SEED_ND475:
   cfam: 4F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.021464362550206728
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.21211912881386388
 SPEC_SPEC_3A_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2827,8 +2827,8 @@ SPEC_SPEC_3A_FLATDMS:
   cfam: 3A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01878058779751283
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.19433284760060673
 SPEC_SPEC_3A_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2838,8 +2838,8 @@ SPEC_SPEC_3A_FLATDMS_ND225:
   cfam: 3A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01878058779751283
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.19433284760060673
 SPEC_SPEC_3A_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2849,8 +2849,8 @@ SPEC_SPEC_3A_FLATDMS_ND475:
   cfam: 3A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01878058779751283
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.19433284760060673
 SPEC_SPEC_3B_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2860,8 +2860,8 @@ SPEC_SPEC_3B_FLATDMS:
   cfam: 3B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01795627839975837
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.18814036079899604
 SPEC_SPEC_3B_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2871,8 +2871,8 @@ SPEC_SPEC_3B_FLATDMS_ND225:
   cfam: 3B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01795627839975837
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.18814036079899604
 SPEC_SPEC_3B_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2882,8 +2882,8 @@ SPEC_SPEC_3B_FLATDMS_ND475:
   cfam: 3B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01795627839975837
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.18814036079899604
 SPEC_SPEC_3C_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2893,8 +2893,8 @@ SPEC_SPEC_3C_FLATDMS:
   cfam: 3C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.017167672511387594
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.1819462441837001
 SPEC_SPEC_3C_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2904,8 +2904,8 @@ SPEC_SPEC_3C_FLATDMS_ND225:
   cfam: 3C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.017167672511387594
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.1819462441837001
 SPEC_SPEC_3C_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2915,8 +2915,8 @@ SPEC_SPEC_3C_FLATDMS_ND475:
   cfam: 3C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.017167672511387594
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.1819462441837001
 SPEC_SPEC_3D_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2926,8 +2926,8 @@ SPEC_SPEC_3D_FLATDMS:
   cfam: 3D
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01638467683749874
-  num_pixels: null
-  fraction: null
+  num_pixels: 12.0
+  fraction: 0.19238782996117948
 SPEC_SPEC_3D_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2937,8 +2937,8 @@ SPEC_SPEC_3D_FLATDMS_ND225:
   cfam: 3D
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01638467683749874
-  num_pixels: null
-  fraction: null
+  num_pixels: 12.0
+  fraction: 0.19238782996117948
 SPEC_SPEC_3D_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2948,8 +2948,8 @@ SPEC_SPEC_3D_FLATDMS_ND475:
   cfam: 3D
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01638467683749874
-  num_pixels: null
-  fraction: null
+  num_pixels: 12.0
+  fraction: 0.19238782996117948
 SPEC_SPEC_3E_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2959,8 +2959,8 @@ SPEC_SPEC_3E_FLATDMS:
   cfam: 3E
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.015818894648235073
-  num_pixels: null
-  fraction: null
+  num_pixels: 12.0
+  fraction: 0.18964946579909744
 SPEC_SPEC_3E_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2970,8 +2970,8 @@ SPEC_SPEC_3E_FLATDMS_ND225:
   cfam: 3E
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.015818894648235073
-  num_pixels: null
-  fraction: null
+  num_pixels: 12.0
+  fraction: 0.18964946579909744
 SPEC_SPEC_3E_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2981,8 +2981,8 @@ SPEC_SPEC_3E_FLATDMS_ND475:
   cfam: 3E
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.015818894648235073
-  num_pixels: null
-  fraction: null
+  num_pixels: 12.0
+  fraction: 0.18964946579909744
 SPEC_SPEC_3F_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -2992,8 +2992,8 @@ SPEC_SPEC_3F_FLATDMS:
   cfam: 3F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.017349579297655512
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.18268584061950413
 SPEC_SPEC_3F_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3003,8 +3003,8 @@ SPEC_SPEC_3F_FLATDMS_ND225:
   cfam: 3F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.017349579297655512
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.18268584061950413
 SPEC_SPEC_3F_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3014,8 +3014,8 @@ SPEC_SPEC_3F_FLATDMS_ND475:
   cfam: 3F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.017349579297655512
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.18268584061950413
 SPEC_SPEC_3G_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3025,8 +3025,8 @@ SPEC_SPEC_3G_FLATDMS:
   cfam: 3G
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01642543894083477
-  num_pixels: null
-  fraction: null
+  num_pixels: 11.0
+  fraction: 0.18062606861365046
 SPEC_SPEC_3G_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3036,8 +3036,8 @@ SPEC_SPEC_3G_FLATDMS_ND225:
   cfam: 3G
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01642543894083477
-  num_pixels: null
-  fraction: null
+  num_pixels: 11.0
+  fraction: 0.18062606861365046
 SPEC_SPEC_3G_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3047,8 +3047,8 @@ SPEC_SPEC_3G_FLATDMS_ND475:
   cfam: 3G
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01642543894083477
-  num_pixels: null
-  fraction: null
+  num_pixels: 11.0
+  fraction: 0.18062606861365046
 SPEC_SPEC_2A_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3058,8 +3058,8 @@ SPEC_SPEC_2A_FLATDMS:
   cfam: 2A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.022208902371453548
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.21254702881077084
 SPEC_SPEC_2A_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3069,8 +3069,8 @@ SPEC_SPEC_2A_FLATDMS_ND225:
   cfam: 2A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.022208902371453548
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.21254702881077084
 SPEC_SPEC_2A_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3080,8 +3080,8 @@ SPEC_SPEC_2A_FLATDMS_ND475:
   cfam: 2A
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.022208902371453548
-  num_pixels: null
-  fraction: null
+  num_pixels: 10.0
+  fraction: 0.21254702881077084
 SPEC_SPEC_2B_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3091,8 +3091,8 @@ SPEC_SPEC_2B_FLATDMS:
   cfam: 2B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.020690973981136358
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.1927459070981454
 SPEC_SPEC_2B_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3102,8 +3102,8 @@ SPEC_SPEC_2B_FLATDMS_ND225:
   cfam: 2B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.020690973981136358
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.1927459070981454
 SPEC_SPEC_2B_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3113,8 +3113,8 @@ SPEC_SPEC_2B_FLATDMS_ND475:
   cfam: 2B
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.020690973981136358
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.1927459070981454
 SPEC_SPEC_2C_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3124,8 +3124,8 @@ SPEC_SPEC_2C_FLATDMS:
   cfam: 2C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01985295692297068
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.18793783628645938
 SPEC_SPEC_2C_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3135,8 +3135,8 @@ SPEC_SPEC_2C_FLATDMS_ND225:
   cfam: 2C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01985295692297068
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.18793783628645938
 SPEC_SPEC_2C_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3146,8 +3146,8 @@ SPEC_SPEC_2C_FLATDMS_ND475:
   cfam: 2C
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01985295692297068
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.18793783628645938
 SPEC_SPEC_2F_FLATDMS:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3157,8 +3157,8 @@ SPEC_SPEC_2F_FLATDMS:
   cfam: 2F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01996488150148029
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.1813448319936151
 SPEC_SPEC_2F_FLATDMS_ND225:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3168,8 +3168,8 @@ SPEC_SPEC_2F_FLATDMS_ND225:
   cfam: 2F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01996488150148029
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.1813448319936151
 SPEC_SPEC_2F_FLATDMS_ND475:
   mode: excam_imaging
   dms: spc_spec_flattened
@@ -3179,8 +3179,8 @@ SPEC_SPEC_2F_FLATDMS_ND475:
   cfam: 2F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.01996488150148029
-  num_pixels: null
-  fraction: null
+  num_pixels: 9.0
+  fraction: 0.1813448319936151
 OPEN_OPEN_1F_FLATDMS:
   mode: excam_imaging
   dms: hlc_flattened
@@ -3190,8 +3190,8 @@ OPEN_OPEN_1F_FLATDMS:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.10438235156742855
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.36351912644408146
 OPEN_OPEN_1F_FLATDMS_ND225:
   mode: excam_imaging
   dms: hlc_flattened
@@ -3201,8 +3201,8 @@ OPEN_OPEN_1F_FLATDMS_ND225:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.10438235156742855
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.36351912644408146
 OPEN_OPEN_1F_FLATDMS_ND475:
   mode: excam_imaging
   dms: hlc_flattened
@@ -3212,8 +3212,8 @@ OPEN_OPEN_1F_FLATDMS_ND475:
   cfam: 1F
   dpam: imaging_lens
   peak_flux_ratio_pix: 0.10438235156742855
-  num_pixels: null
-  fraction: null
+  num_pixels: 4.0
+  fraction: 0.36351912644408146
 CGI_SEQ_SPEC_UNOCC_SPECBIN_NOSLIT_PRISM3_3:
   mode: excam_imaging
   dms: spc_spec_band3_flattened
@@ -3654,3 +3654,366 @@ CGI_SEQ_SPECROT_UNOCC_LSF_ZEROPT_R2C2SLIT_PRISM2_3D_ND225:
   peak_flux_ratio_pix: 0.012171
   num_pixels: 10
   fraction: 0.077237
+WFOV_WFOV_4A_OPTDMS:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 4A
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.02509558031377268
+  num_pixels: 9.0
+  fraction: 0.14148048657980614
+WFOV_WFOV_4A_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 4A
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.02509558031377268
+  num_pixels: 9.0
+  fraction: 0.14148048657980614
+WFOV_WFOV_4A_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 4A
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.02509558031377268
+  num_pixels: 9.0
+  fraction: 0.14148048657980614
+WFOV_WFOV_4B_OPTDMS:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 4B
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.02340337196096004
+  num_pixels: 9.0
+  fraction: 0.13458321045735064
+WFOV_WFOV_4B_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 4B
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.02340337196096004
+  num_pixels: 9.0
+  fraction: 0.13458321045735064
+WFOV_WFOV_4B_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 4B
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.02340337196096004
+  num_pixels: 9.0
+  fraction: 0.13458321045735064
+WFOV_WFOV_4C_OPTDMS:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 4C
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.023501113816611387
+  num_pixels: 9.0
+  fraction: 0.1280172636140593
+WFOV_WFOV_4C_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 4C
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.023501113816611387
+  num_pixels: 9.0
+  fraction: 0.1280172636140593
+WFOV_WFOV_4C_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 4C
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.023501113816611387
+  num_pixels: 9.0
+  fraction: 0.1280172636140593
+WFOV_WFOV_4F_OPTDMS:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 4F
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.024114065933642632
+  num_pixels: 9.0
+  fraction: 0.13562231677444622
+WFOV_WFOV_4F_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 4F
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.024114065933642632
+  num_pixels: 9.0
+  fraction: 0.13562231677444622
+WFOV_WFOV_4F_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_wide_cgisim_optdms
+  spam_lsam: wfov_spam_wfov_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 4F
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.024114065933642632
+  num_pixels: 9.0
+  fraction: 0.13562231677444622
+SPEC_SPEC_3A_OPTDMS:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 3A
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.019452767103230316
+  num_pixels: 11.0
+  fraction: 0.1446949846423277
+SPEC_SPEC_3A_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 3A
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.019452767103230316
+  num_pixels: 11.0
+  fraction: 0.1446949846423277
+SPEC_SPEC_3A_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 3A
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.019452767103230316
+  num_pixels: 11.0
+  fraction: 0.1446949846423277
+SPEC_SPEC_3B_OPTDMS:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 3B
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018989978849475224
+  num_pixels: 11.0
+  fraction: 0.13969970506135296
+SPEC_SPEC_3B_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 3B
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018989978849475224
+  num_pixels: 11.0
+  fraction: 0.13969970506135296
+SPEC_SPEC_3B_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 3B
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018989978849475224
+  num_pixels: 11.0
+  fraction: 0.13969970506135296
+SPEC_SPEC_3C_OPTDMS:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 3C
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018897418640110793
+  num_pixels: 11.0
+  fraction: 0.1342946319600326
+SPEC_SPEC_3C_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 3C
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018897418640110793
+  num_pixels: 11.0
+  fraction: 0.1342946319600326
+SPEC_SPEC_3C_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 3C
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018897418640110793
+  num_pixels: 11.0
+  fraction: 0.1342946319600326
+SPEC_SPEC_3D_OPTDMS:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 3D
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.01853973767924574
+  num_pixels: 12.0
+  fraction: 0.13628361353020638
+SPEC_SPEC_3D_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 3D
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.01853973767924574
+  num_pixels: 12.0
+  fraction: 0.13628361353020638
+SPEC_SPEC_3D_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 3D
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.01853973767924574
+  num_pixels: 12.0
+  fraction: 0.13628361353020638
+SPEC_SPEC_3E_OPTDMS:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 3E
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.017518761867037467
+  num_pixels: 13.0
+  fraction: 0.13897798679121112
+SPEC_SPEC_3E_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 3E
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.017518761867037467
+  num_pixels: 13.0
+  fraction: 0.13897798679121112
+SPEC_SPEC_3E_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 3E
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.017518761867037467
+  num_pixels: 13.0
+  fraction: 0.13897798679121112
+SPEC_SPEC_3F_OPTDMS:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 3F
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018865738805894303
+  num_pixels: 11.0
+  fraction: 0.13528795022315632
+SPEC_SPEC_3F_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 3F
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018865738805894303
+  num_pixels: 11.0
+  fraction: 0.13528795022315632
+SPEC_SPEC_3F_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 3F
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018865738805894303
+  num_pixels: 11.0
+  fraction: 0.13528795022315632
+SPEC_SPEC_3G_OPTDMS:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: open_34
+  fsam: open
+  cfam: 3G
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018977960920217415
+  num_pixels: 11.0
+  fraction: 0.1287223995057469
+SPEC_SPEC_3G_OPTDMS_ND225:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd2.25
+  fsam: open
+  cfam: 3G
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018977960920217415
+  num_pixels: 11.0
+  fraction: 0.1287223995057469
+SPEC_SPEC_3G_OPTDMS_ND475:
+  mode: excam_imaging
+  dms: spc_spec_cgisim_optdms
+  spam_lsam: spec_spam_spec_lsam
+  fpam: nd4.75
+  fsam: open
+  cfam: 3G
+  dpam: imaging_lens
+  peak_flux_ratio_pix: 0.018977960920217415
+  num_pixels: 11.0
+  fraction: 0.1287223995057469
