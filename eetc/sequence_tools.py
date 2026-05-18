@@ -178,6 +178,16 @@ def _rot_gauss_fit(data):
                             bounds=bounds, p0=init_guess, maxfev=1e5,
                             xtol=1e-15,)
 
+    # If the fitted amplitude is much less than the PSF peak, the optimizer
+    # found a broad-wing local minimum.  Retry with a tight sx upper bound
+    # to force convergence onto the PSF core.
+    if popt[1] / np.max(data) < 0.7:
+        ub_retry = list(ub)
+        ub_retry[4] = 1.5  # tighten sx upper bound
+        popt, _ = curve_fit(_rot_gauss_spot, XY, data.ravel(),
+                                bounds=(lb, ub_retry), p0=init_guess, maxfev=1e5,
+                                xtol=1e-15,)
+
     gauss_val = _rot_gauss_spot(XY, *popt)
     residual = data - gauss_val
     ss_r = np.sum((np.mean(data) - gauss_val)**2)

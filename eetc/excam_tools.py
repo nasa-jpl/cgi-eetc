@@ -2744,13 +2744,13 @@ def calc_pc(target_snr, fluxe, fluxe_bright, darke, cic, rn, X, a,
         FOM = lambda v: (v[1] + overhead)*v[2] # no gain in wall-clock time
 
         res1 = scipy.optimize.minimize(fun=FOM,
-                                    x0=np.array([g_lb, tmin, Nmin]),
+                                    x0=np.array([gmax, t_ub, Nmin]),
                                     bounds=bounds,
                                     tol=tol,
                                     constraints=(nconst1, nconst2, nconst3)
                                     )
 
-        #same thing, but starting point of gmax and Nmax
+        #same thing, but different starting point
         res2 = scipy.optimize.minimize(fun=FOM,
                                     x0=np.array([gmax, tmin, Nmax]),
                                     bounds=bounds,
@@ -2800,7 +2800,7 @@ def calc_pc(target_snr, fluxe, fluxe_bright, darke, cic, rn, X, a,
                     sign, num_pixels)
 
         res3 = scipy.optimize.minimize(fun=_SNR_CR_pc1,
-                                   x0=np.array([g_lb, tmin, Nmin]),
+                                   x0=np.array([gmax, t_ub, Nmin]),
                                    args=(fluxe, darke, cic, T, X, a, Lij, -1,
                                         num_pixels),
                                    bounds=bounds,
@@ -2809,7 +2809,7 @@ def calc_pc(target_snr, fluxe, fluxe_bright, darke, cic, rn, X, a,
                                    )
 
 
-        #same thing, but starting point of gmax and Nmax
+        #same thing, but different starting point
         res4 = scipy.optimize.minimize(fun=_SNR_CR_pc1,
                                    x0=np.array([gmax, tmin, Nmax]),
                                    args=(fluxe, darke, cic, rn, X, a, Lij, -1,
@@ -3104,15 +3104,15 @@ def calc_pc_fixed_N(target_snr, fluxe, fluxe_bright, darke, cic, rn, X, a,
         FOM = lambda v: (v[1] + overhead)*N # no gain in wall-clock time
 
         res1 = scipy.optimize.minimize(fun=FOM,
-                                    x0=np.array([g_lb, tmin]),
+                                    x0=np.array([gmax, tmin]),
                                     bounds=bounds,
                                     tol=tol,
                                     constraints=(nconst1, nconst2, nconst3)
                                     )
 
-        #same thing, but starting point of gmax and tmax
+        #same thing, but different starting point
         res2 = scipy.optimize.minimize(fun=FOM,
-                                    x0=np.array([gmax, tmax]),
+                                    x0=np.array([gmax, t_ub]),
                                     bounds=bounds,
                                     tol=tol,
                                     constraints=(nconst1, nconst2, nconst3)
@@ -3159,7 +3159,7 @@ def calc_pc_fixed_N(target_snr, fluxe, fluxe_bright, darke, cic, rn, X, a,
                                     sign, num_pixels)
 
         res3 = scipy.optimize.minimize(fun=_SNR_CR_pc1,
-                                   x0=np.array([g_lb, tmin]),
+                                   x0=np.array([gmax, tmin]),
                                    args=(N, fluxe, darke, cic, T, X, a, Lij,
                                          -1, num_pixels),
                                    bounds=bounds,
@@ -3168,9 +3168,9 @@ def calc_pc_fixed_N(target_snr, fluxe, fluxe_bright, darke, cic, rn, X, a,
                                    )
 
 
-        #same thing, but starting point of gmax and tmax
+        #same thing, but different starting point
         res4 = scipy.optimize.minimize(fun=_SNR_CR_pc1,
-                                   x0=np.array([gmax, tmax]),
+                                   x0=np.array([gmax, t_ub]),
                                    args=(N, fluxe, darke, cic, rn, X, a, Lij,
                                          -1, num_pixels),
                                    bounds=bounds,
@@ -3539,7 +3539,7 @@ def calc_pc_gain_fixed_Ntime(t_tot, fluxe, fluxe_bright, darke, cic, rn, X, a,
         upper = np.array([gmax])
         bound = scipy.optimize.Bounds(lb=lower, ub=upper)
         sres = scipy.optimize.minimize(fun=_SNR_CR_ttot1,
-                            x0=np.array([g_lb]),
+                            x0=np.array([gmax]),
                             args=(t0, t_tot, fluxe, darke, cic, T, X, a,
                                     Lij, -1, num_pixels, overhead),
                             bounds=bound,
@@ -3619,7 +3619,7 @@ def calc_pc_gain_fixed_Ntime(t_tot, fluxe, fluxe_bright, darke, cic, rn, X, a,
     nconst3 = scipy.optimize.NonlinearConstraint(rail, 0, alpha0*fwc)
 
     res3 = scipy.optimize.minimize(fun=_SNR_CR_ttot,
-                                x0=np.array([g_lb, t_lb]),
+                                x0=np.array([gmax, t_lb]),
                                 args=(t_tot, fluxe, darke, cic, T, X, a,
                                         Lij, -1, num_pixels, overhead),
                                 bounds=bounds,
@@ -3627,7 +3627,7 @@ def calc_pc_gain_fixed_Ntime(t_tot, fluxe, fluxe_bright, darke, cic, rn, X, a,
                                 constraints=(nconst1, nconst3, nconst4)
                                 )
 
-    #same thing, but starting point of gmax and t_UB
+    #same thing, but starting point of t_UB
     res4 = scipy.optimize.minimize(fun=_SNR_CR_ttot,
                                 x0=np.array([gmax, t_UB]),
                                 args=(t_tot, fluxe, darke, cic, T, X, a,
