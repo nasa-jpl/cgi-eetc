@@ -30,7 +30,9 @@ For a complete list of CFAM filters and their effective wavelengths of transmiss
 
 The eetc pulls the relevant flux rate for a user-specified stellar target and scales to a specified apparent magnitude. This scaled flux rate is then modulated by the OTA and CGI throughput curves for a given observation mode ('sequence'), and used to estimate the required exposure time and gain settings required to reach a specified signal-to-noise ratio (photon + detector noise).
 
-The current list of supported calibration sequences is detailed on the EETC wiki: (link TBD)
+The current list of supported calibration sequences is detailed on the EETC wiki:
+
+[https://wiki.jpl.nasa.gov/display/CGIfocus8/Exposure+Time+Calculator](https://wiki.jpl.nasa.gov/display/CGIfocus8/Exposure+Time+Calculator)
 
 ## Installing
 ### Git LFS
@@ -185,7 +187,7 @@ Copyright 2025, by the California Institute of Technology. ALL RIGHTS RESERVED. 
 
 ## Authors
 
-* Eric Cady
 * Sam Halverson
-* Kevin Ludwick
 * Sam Miller
+* Eric Cady
+* Kevin Ludwick
