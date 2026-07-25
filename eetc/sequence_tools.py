@@ -140,6 +140,146 @@ def get_num_pixels_and_fraction(array, thresh=0.8):
 
     return num_pixels, fraction, Rsq_adj
 
+def _triple_gauss_spot(xy, offset, A, x0, y0, sx, sy, theta,
+                       scale_factor, intensity_ratio):
+    """Central lobe + 2 symmetric side lobes offset along the major (sy) axis.
+
+    Parameters match _rot_gauss_spot plus:
+      scale_factor    : lobe spacing = scale_factor * sy
+      intensity_ratio : A_lobe = intensity_ratio * A
+    """
+    d  = scale_factor * sy
+    dx = d * np.sin(theta)
+    dy = d * np.cos(theta)
+    return (offset
+            + _rot_gauss_spot(xy, 0, A,                   x0,    y0,    sx, sy, theta)
+            + _rot_gauss_spot(xy, 0, A * intensity_ratio, x0+dx, y0+dy, sx, sy, theta)
+            + _rot_gauss_spot(xy, 0, A * intensity_ratio, x0-dx, y0-dy, sx, sy, theta))
+
+def get_num_pixels_and_fraction_spec(array, thresh=0.8,
+                                     scale_factor=4.53, intensity_ratio=0.63):
+    """
+    Variant of get_num_pixels_and_fraction for SPEC-filter PSFs with a
+    triple-Gaussian model (central lobe + two symmetric side lobes).
+
+    Parameters
+    ----------
+    array : 2-D array
+        Input PSF image. Same requirements as get_num_pixels_and_fraction.
+    thresh : float
+        Adjusted R^2 threshold for the fit.  Defaults to 0.8.
+    scale_factor : float
+        Lobe spacing (= scale_factor * sy).  Defaults to 4.53.
+    intensity_ratio : float
+        Intensity ratio (A_lobe / A_central).  Defaults to 0.63.
+
+    Returns
+    -------
+    num_pixels : int
+        Number of pixels within the central-lobe FWHM ellipse.
+    fraction : float
+        Fraction of total array flux within the central-lobe FWHM ellipse.
+    Rsq_adj : float
+        Adjusted R^2 value from the fit.
+    """
+    check.twoD_array(array, 'array', TypeError)
+    if not np.isrealobj(array):
+        raise TypeError('Array must be real-valued')
+    if (array < 0).all():
+        raise TypeError('Array must have some positive numbers')
+    if np.isnan(array).all():
+        raise ValueError('Array cannot be all NaNs')
+    if (array == 0).all():
+        raise ValueError('Array cannot be all zeroes')
+    if (not np.isnan(array).any()) and (not np.isfinite(array).all()):
+        raise TypeError('Array must be finite')
+    if (array[~np.isnan(array)] == 0).all():
+        raise ValueError('Array cannot be all zeroes in between the NaNs')
+    check.real_positive_scalar(thresh, 'thresh', TypeError)
+    if thresh > 1:
+        raise ValueError('thresh must be <= 1.')
+
+    y = np.arange(0, len(array))
+    x = np.arange(0, len(array[0]))
+    X, Y = np.meshgrid(x, y)
+    good_ind = np.where(~np.isnan(array))
+    X = X[good_ind]
+    Y = Y[good_ind]
+    XY = np.vstack((X, Y))
+    data = array[good_ind]
+
+    offset0 = np.median(data)
+    A0 = np.max(data) - offset0
+    peak_ind = np.argmax(data)
+    x00 = X[peak_ind]
+    y00 = Y[peak_ind]
+
+    def _triple_gauss_fixed(xy, offset, A, x0, y0, sx, sy, theta):
+        return _triple_gauss_spot(xy, offset, A, x0, y0, sx, sy, theta,
+                                  scale_factor, intensity_ratio)
+
+    theta_seeds = [np.pi/2, np.pi/6, -np.pi/6]
+    best_rsq = -np.inf
+    best_popt = None
+
+    for theta0 in theta_seeds:
+        p0 = [offset0, A0, x00, y00, 2.0, 0.85, theta0]
+        lb = [0, 0, 0, 0, 0.3, 0.3, -np.pi]
+        ub = [np.max(data), 2*np.max(data), X.max(), Y.max(), 10, 10, np.pi]
+
+        try:
+            popt, _ = curve_fit(_triple_gauss_fixed, XY, data.ravel(),
+                                p0=p0, bounds=(lb, ub),
+                                maxfev=int(1e6), xtol=1e-12)
+
+            fit_vals = _triple_gauss_fixed(XY, *popt)
+            ss_r = np.sum((np.mean(data) - fit_vals)**2)
+            ss_e = np.sum((data - fit_vals)**2)
+            Rsq = ss_r / (ss_e + ss_r)
+            n, k = data.size, 7
+            Rsq_adj = 1 - (1 - Rsq) * (n - 1) / (n - k)
+
+            if Rsq_adj > best_rsq:
+                best_rsq = Rsq_adj
+                best_popt = popt
+        except Exception:
+            continue
+
+    if best_popt is None:
+        raise Exception('Could not find a triple-Gaussian fit to the PSF.')
+
+    popt = best_popt
+    _, _, x0, y0, sx, sy, theta = popt
+
+    fit_vals = _triple_gauss_fixed(XY, *popt)
+    ss_r = np.sum((np.mean(data) - fit_vals)**2)
+    ss_e = np.sum((data - fit_vals)**2)
+    Rsq = ss_r / (ss_e + ss_r)
+    n, k = data.size, 7
+    Rsq_adj = 1 - (1 - Rsq) * (n - 1) / (n - k)
+
+    if Rsq_adj < thresh:
+        raise ValueError('The adjusted R^2 of the fit cannot be less than '
+                         'thresh.')
+
+    FWHMx = 2*np.sqrt(2*np.log(2))*sx
+    FWHMy = 2*np.sqrt(2*np.log(2))*sy
+
+    Y = np.arange(0, len(array))
+    X = np.arange(0, len(array[0]))
+    X, Y = np.meshgrid(X, Y)
+
+    rsX = np.cos(theta)*(X-x0)-np.sin(theta)*(Y-y0)
+    rsY = np.sin(theta)*(X-x0)+np.cos(theta)*(Y-y0)
+    ellipse = rsX**2/(FWHMx/2)**2 + rsY**2/(FWHMy/2)**2
+    ell_ind = np.where(ellipse <= 1)
+    pre_resel = array[ell_ind]
+    resel = pre_resel[~np.isnan(pre_resel)]
+    num_pixels = resel.size
+    fraction = np.sum(resel)/np.nansum(array)
+
+    return num_pixels, fraction, Rsq_adj
+
 # Gaussian with different widths in x and y directions, and then rotated by
 # theta
 def _rot_gauss_spot(xy, offset, A, x0, y0, sx, sy, theta):

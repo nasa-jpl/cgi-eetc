@@ -15,7 +15,9 @@ from astropy.io import fits
 
 import eetc
 from eetc.sequence_tools import (get_peak_flux_ratio_pix,
-                                 get_num_pixels_and_fraction, _rot_gauss_spot)
+                                 get_num_pixels_and_fraction, _rot_gauss_spot,
+                                 get_num_pixels_and_fraction_spec,
+                                 _triple_gauss_spot)
 import eetc.util.ut_check as ut_check
 
 class TestGetPeakFluxRatioPix(unittest.TestCase):
@@ -309,6 +311,127 @@ class TestGetNumPixelsAndFraction(unittest.TestCase):
         with self.assertRaises(Exception):
             get_num_pixels_and_fraction(ar)
 
+
+class TestGetNumPixelsAndFractionSpec(unittest.TestCase):
+    """
+    Unit tests for get_num_pixels_and_fraction_spec function.
+    """
+    def setUp(self):
+        self.ar = np.zeros((70, 70))
+
+        x = np.arange(70)
+        y = np.arange(70)
+        X, Y = np.meshgrid(x, y)
+        # adding a triple-Gaussian PSF
+        offset = 100
+        A = 2000
+        x0 = 25
+        y0 = 25
+        sx = 4
+        sy = 2
+        theta = np.pi/2
+        scale_factor = 4.53
+        intensity_ratio = 0.63
+        self.ar += _triple_gauss_spot((X, Y), offset, A, x0, y0, sx, sy, theta,
+                                      scale_factor, intensity_ratio)
+
+    def test_invalid_array(self):
+        """Fails as expected on invalid inputs"""
+        perrlist = [0, 1, (1,), None, 'txt', -1.5j, # not array
+                    np.ones((2,)), np.ones((2, 2, 2)), # not 2D
+                    1j*np.ones((3, 3)), # not real-valued
+                    -1*np.ones((3, 3)), # no positives
+                    ]
+
+        for perr in perrlist:
+            with self.assertRaises(TypeError):
+                get_num_pixels_and_fraction_spec(perr)
+                pass
+            pass
+        pass
+
+    def test_all_zeros(self):
+        """Fails as expected on invalid inputs"""
+        with self.assertRaises(ValueError):
+            get_num_pixels_and_fraction_spec(np.zeros((3, 3)))
+            pass
+        pass
+
+    def test_all_nans(self):
+        """Fails as expected on invalid inputs"""
+        with self.assertRaises(ValueError):
+            get_num_pixels_and_fraction_spec(np.nan*np.ones((3, 3)))
+            pass
+        pass
+
+    def test_infinite(self):
+            """Fails as expected on invalid inputs"""
+            with self.assertRaises(TypeError):
+                ar = np.ones((3, 3))
+                ar[1, 1] = np.inf
+                get_num_pixels_and_fraction_spec(ar)
+                pass
+            pass
+
+    def test_all_zeros_and_nans(self):
+        """Fails as expected on invalid inputs"""
+        test = np.zeros((3, 3))
+        test[0, 0] = np.nan
+        test[-1, -1] = np.nan
+
+        with self.assertRaises(ValueError):
+            get_num_pixels_and_fraction_spec(test)
+            pass
+        pass
+
+    def test_thresh(self):
+        """Fails as expected on invalid thresh parameter"""
+        for perr in ut_check.rpslist:
+            with self.assertRaises(TypeError):
+                get_num_pixels_and_fraction_spec(self.ar, perr)
+
+        # fails when thresh > 1
+        with self.assertRaises(ValueError):
+            get_num_pixels_and_fraction_spec(self.ar, 1.1)
+
+    def test_success(self):
+        '''Successful run for triple-Gaussian with no noise added.'''
+        num_pixels, fraction, Rsq_adj = get_num_pixels_and_fraction_spec(self.ar, thresh=0.5)
+
+        # assert fit completed and returned reasonable values
+        self.assertTrue(num_pixels > 0)
+        self.assertTrue(0 < fraction < 1)
+        self.assertTrue(Rsq_adj > 0.5)
+
+    def test_success_real_psf_nominal(self):
+        """Successful run for real SPC SPEC_SPEC_3C nominal PSF."""
+        ar = fits.getdata(os.path.join(eetc.lib_dir, 'spec_psf_3C.fits'))
+        num_pixels, fraction, Rsq_adj = get_num_pixels_and_fraction_spec(ar, 0.8)
+
+        self.assertTrue(Rsq_adj > 0.8)
+        self.assertTrue(num_pixels > 0)
+        self.assertTrue(fraction > 0)
+
+    def test_success_real_psf_rotated(self):
+        """Successful run for real SPC SPEC_SPEC_ROT_3C rotated PSF."""
+        ar = fits.getdata(os.path.join(eetc.lib_dir, 'spec_rot_psf_3C.fits'))
+        num_pixels, fraction, Rsq_adj = get_num_pixels_and_fraction_spec(ar, 0.8)
+
+        self.assertTrue(Rsq_adj > 0.8)
+        self.assertTrue(num_pixels > 0)
+        self.assertTrue(fraction > 0)
+
+    def test_Rsq_thresh_fail(self):
+        """Array that doesn't get an adjusted R^2 higher than thresh."""
+        ar = fits.getdata(os.path.join(eetc.lib_dir, 'spec_psf_3C.fits'))
+        with self.assertRaises(ValueError):
+            get_num_pixels_and_fraction_spec(ar, 1)
+
+    def test_no_PSF(self):
+        '''If array has no discernable PSF, the fitting should fail.'''
+        ar = np.ones((5, 5))
+        with self.assertRaises(Exception):
+            get_num_pixels_and_fraction_spec(ar)
 
 
 if __name__ == '__main__':
